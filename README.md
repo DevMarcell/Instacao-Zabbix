@@ -28,12 +28,12 @@ DBPassword=password
 
 e. Configure o PHP para o frontend Zabbix
 Editar arquivo /etc/zabbix/apache.conf, descomente e defina o fuso horário correto.
-# php_value date.timezone America/Sao_Paulo
+php_value date.timezone America/Sao_Paulo
 
 f. Inicie o servidor Zabbix e os processos do agente
 Inicie o servidor Zabbix e os processos do agente e configure-os para que sejam iniciados durante o boot do sistema. ~
-# systemctl restart zabbix-server zabbix-agent apache2
-# systemctl enable zabbix-server zabbix-agent apache2
+systemctl restart zabbix-server zabbix-agent apache2
+systemctl enable zabbix-server zabbix-agent apache2
 
 g. Acesse o Zabbix
 No navegador, digite o endereço IP da máquina onde foi instalado/zabbix ~
